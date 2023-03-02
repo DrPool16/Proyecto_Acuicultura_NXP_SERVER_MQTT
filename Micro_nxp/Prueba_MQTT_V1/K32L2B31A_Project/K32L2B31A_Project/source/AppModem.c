@@ -21,6 +21,7 @@
 #include "alarma.h"
 #include "AppModem.h"
 #include "botones.h"
+#include "sensor_temperatura.h"
 
 
 
@@ -33,12 +34,14 @@ char Mod_Snd_Tmr(char *cmd2Send,unsigned char dlyCmd);
 
 // Variables Globales en RAM.
 extern volatile uint8_t rx_ring_buffer[RX_RING_BUFFER_SIZE];
-char var_topic[21];
+//extern volatile valor_temp1
+char var_topic[24];
 uint32_t vbleTime=0;
 uint32_t cont_temp=0;
 int cont = 30;
 int32_t nroBytesEnBuffer;
 int32_t numeroDeBytesDisponiblesEnBufferRx(void);
+float temperatura_sens1;
 #define nroByRx numeroDeBytesDisponiblesEnBufferRx
 
 static char appSmsSt;
@@ -100,10 +103,13 @@ char Mod_Snd_Tmr(char *cmd2Send,unsigned char dlyCmd){
 	}
 
 }
+
+
 /*Funcion de Aplicacion*/ 
 void AplicacionModem_Run(void){
 //static char keyCh; //Estatica
-
+	//valor_temp();
+	temperatura_sens1 = valor_temp();
 	switch(appSmsSt){
 		case MODEM_OFF:
 			if(Mod_Snd_Tmr("AT+CFUN=0\r\n",TIME_OFF_MODEM)) appSmsSt = MODEM_CFG_APN;
@@ -157,7 +163,7 @@ void AplicacionModem_Run(void){
 				nroBytesEnBuffer = numeroDeBytesDisponiblesEnBufferRx();
 				rx_ring_buffer[nroBytesEnBuffer] = 0x00; // fin de cadena
 				if(Modem_Respuesta_OK("OK")){ // se tiene IP
-					Mod_Snd_Tmr("AT+QMTOPEN=0,\"18.204.208.21\",1883\r\n", MODEM_WAIT_CONN_MQTT);
+					Mod_Snd_Tmr("AT+QMTOPEN=0,\"54.163.179.109\",1883\r\n", MODEM_WAIT_CONN_MQTT);
 					appSmsSt = MODEM_CONN_MQTT;
 				}else{
 					//!!! hay un error de conexion, posible no hay saldo
@@ -190,8 +196,8 @@ void AplicacionModem_Run(void){
 			//!!! manda dato y termina con CTL Z y se va a
 			if(Alarma_Elapsed(vbleTime)){
 				if(Modem_Respuesta_OK(">")){ // Se conecto al MQTT sin problema
-					cont_temp = cont_temp + 5;
-					snprintf(var_topic, 21,"temperatura temp=%d",cont_temp);
+					//cont_temp = cont_temp + 5;
+					snprintf(var_topic, 24,"temperatura temp=%2.2f",temperatura_sens1);
 					//var_topic = "temperatura temp=30";
 					//Mod_Snd_Tmr("temperatura temp=%d",cont_temp,3);
 					Mod_Snd_Tmr((char *)(&var_topic),3);

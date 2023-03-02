@@ -367,6 +367,36 @@ void BOARD_InitOSCPins(void);
  */
 void BOARD_InitADCPins(void);
 
+/*!
+ * @brief Configures pin routing and optionally pin electrical features.
+ *
+ */
+void BOARD_Lm35(void);
+
+/*!
+ * @brief Configures pin routing and optionally pin electrical features.
+ *
+ */
+void BOARD_BM280(void);
+/*! @name PORTB0 (number 35), J4[2]/A0/LCD_P0
+  @{ */
+
+/* Symbols to be used with PORT driver */
+#define BOARD_INITADC_PINS_sensor_externo_PORT PORTB               /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITADC_PINS_sensor_externo_PIN 0U                   /*!<@brief PORT pin number */
+#define BOARD_INITADC_PINS_sensor_externo_PIN_MASK (1U << 0U)      /*!<@brief PORT pin mask */
+                                                                   /* @} */
+
+/*!
+ * @brief Configures pin routing and optionally pin electrical features.
+ *
+ */
+/*!
+ * @brief Configures pin routing and optionally pin electrical features.
+ *
+ */
+void BOARD_InitADC_BMP280_Pins(void);
+
 #if defined(__cplusplus)
 }
 #endif

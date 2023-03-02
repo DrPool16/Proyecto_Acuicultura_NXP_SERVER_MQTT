@@ -6,11 +6,11 @@
 /* clang-format off */
 /* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
 !!GlobalInfo
-product: Peripherals v10.0
+product: Peripherals v11.0
 processor: K32L2B31xxxxA
 package_id: K32L2B31VLH0A
 mcu_data: ksdk2_0
-processor_version: 10.0.0
+processor_version: 12.0.0
 board: FRDM-K32L2B
 functionalGroups:
 - name: BOARD_InitPeripherals
@@ -33,6 +33,14 @@ component:
 - type: 'uart_cmsis_common'
 - type_id: 'uart_cmsis_common_9cb8e302497aa696fdbb5a4fd622c2a8'
 - global_USART_CMSIS_common:
+  - quick_selection: 'default'
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
+
+/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+component:
+- type: 'gpio_adapter_common'
+- type_id: 'gpio_adapter_common_57579b9ac814fe26bf95df0a384c36b6'
+- global_gpio_adapter_common:
   - quick_selection: 'default'
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
@@ -113,12 +121,12 @@ instance:
       - enable_custom_name: 'false'
     - adc16_channels_config:
       - 0:
-        - channelName: 'LUZ'
+        - channelName: 'LM35_1'
         - enableDifferentialConversion: 'false'
-        - channelNumber: 'SE.3'
+        - channelNumber: 'SE.7a'
         - enableInterruptOnConversionCompleted: 'false'
         - channelGroup: '0'
-        - initializeChannel: 'false'
+        - initializeChannel: 'true'
       - 1:
         - channelName: 'TEMP'
         - enableDifferentialConversion: 'false'
@@ -126,16 +134,28 @@ instance:
         - enableInterruptOnConversionCompleted: 'false'
         - channelGroup: '0'
         - initializeChannel: 'false'
+      - 2:
+        - channelName: 'SENSOR_EXTERNO'
+        - enableDifferentialConversion: 'false'
+        - channelNumber: 'SE.8'
+        - enableInterruptOnConversionCompleted: 'false'
+        - channelGroup: '0'
+        - initializeChannel: 'false'
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
-adc16_channel_config_t ADC0_channelsConfig[2] = {
+adc16_channel_config_t ADC0_channelsConfig[3] = {
   {
-    .channelNumber = 3U,
+    .channelNumber = 7U,
     .enableDifferentialConversion = false,
     .enableInterruptOnConversionCompleted = false,
   },
   {
     .channelNumber = 26U,
+    .enableDifferentialConversion = false,
+    .enableInterruptOnConversionCompleted = false,
+  },
+  {
+    .channelNumber = 8U,
     .enableDifferentialConversion = false,
     .enableInterruptOnConversionCompleted = false,
   }
@@ -161,6 +181,8 @@ static void ADC0_init(void) {
   ADC16_EnableHardwareTrigger(ADC0_PERIPHERAL, false);
   /* Configure channel multiplexing mode */
   ADC16_SetChannelMuxMode(ADC0_PERIPHERAL, ADC0_muxMode);
+  /* Initialize channel */
+  ADC16_SetChannelConfig(ADC0_PERIPHERAL, ADC0_CH2_CONTROL_GROUP, &ADC0_channelsConfig[2]);
 }
 
 /***********************************************************************************************************************
@@ -241,6 +263,10 @@ instance:
       - dataBitsCount: 'kLPUART_EightDataBits'
       - isMsb: 'false'
       - stopBitCount: 'kLPUART_OneStopBit'
+      - enableMatchAddress1: 'false'
+      - matchAddress1: '0'
+      - enableMatchAddress2: 'false'
+      - matchAddress2: '0'
       - rxIdleType: 'kLPUART_IdleTypeStartBit'
       - rxIdleConfig: 'kLPUART_IdleCharacter1'
       - enableTx: 'true'

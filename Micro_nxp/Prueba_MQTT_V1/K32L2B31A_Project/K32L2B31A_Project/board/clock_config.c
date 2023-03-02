@@ -18,11 +18,11 @@
 /* clang-format off */
 /* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
 !!GlobalInfo
-product: Clocks v8.0
+product: Clocks v10.0
 processor: K32L2B31xxxxA
 package_id: K32L2B31VLH0A
 mcu_data: ksdk2_0
-processor_version: 10.0.0
+processor_version: 12.0.0
 board: FRDM-K32L2B
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
@@ -41,8 +41,6 @@ board: FRDM-K32L2B
 /*******************************************************************************
  * Variables
  ******************************************************************************/
-/* System clock frequency. */
-extern uint32_t SystemCoreClock;
 
 /*******************************************************************************
  ************************ BOARD_InitBootClocks function ************************

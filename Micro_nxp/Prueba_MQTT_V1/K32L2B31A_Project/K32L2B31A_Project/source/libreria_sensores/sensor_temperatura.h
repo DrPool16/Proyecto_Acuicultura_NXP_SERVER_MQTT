@@ -1,24 +1,24 @@
-/*! @file : irq_lptmr0.h
+/*! @file : sensor_temperatura.h
  * @author  Ernesto Andres Rincon Cruz
  * @version 1.0.0
- * @date    4 sept. 2021
- * @brief   Driver para IRQ LPTMR0
+ * @date    24/02/2023
+ * @brief   Driver para 
  * @details
  *
  */
-#ifndef IOT_SDK_IRQ_IRQ_LPTMR0_H_
-#define IOT_SDK_IRQ_IRQ_LPTMR0_H_
+#ifndef SENSOR_TEMPERATURA_H_
+#define SENSOR_TEMPERATURA_H_
 /*******************************************************************************
  * Includes
  ******************************************************************************/
-#include "peripherals.h"
+#include "fsl_common.h"
 
 /*!
- * @addtogroup IRQ
+ * @addtogroup X
  * @{
  */
 /*!
- * @addtogroup LPTMR0
+ * @addtogroup X
  * @{
  */
 /*******************************************************************************
@@ -28,18 +28,18 @@
 /*******************************************************************************
  * External vars
  ******************************************************************************/
-
+void fun_bm280(void);
+int Sens_BMP280_INIT(void);
+float valor_temp(void);
 /*******************************************************************************
  * Public vars
  ******************************************************************************/
-extern volatile uint32_t lptmr0_irq_counter;
-extern volatile uint32_t lptmr0_ticks;
+
 /*******************************************************************************
  * Public Prototypes
  ******************************************************************************/
 
+/** @} */ // end of X group
+/** @} */ // end of X group
 
-/** @} */ // end of LPTMR0 group
-/** @} */ // end of IRQ group
-
-#endif /* IOT_SDK_IRQ_IRQ_LPTMR0_H_ */
+#endif /* SENSOR_TEMPERATURA_H_ */

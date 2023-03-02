@@ -7,11 +7,11 @@
 /*
  * TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
 !!GlobalInfo
-product: Pins v10.0
+product: Pins v12.0
 processor: K32L2B31xxxxA
 package_id: K32L2B31VLH0A
 mcu_data: ksdk2_0
-processor_version: 10.0.0
+processor_version: 12.0.0
 board: FRDM-K32L2B
 pin_labels:
 - {pin_num: '23', pin_signal: PTA1/LPUART0_RX/TPM2_CH0, label: 'J1[2]/D0/UART0_RX', identifier: DEBUG_UART0_RX}
@@ -39,7 +39,7 @@ pin_labels:
 - {pin_num: '43', pin_signal: LCD_P20/ADC0_SE14/PTC0/EXTRG_IN/USB_SOF_OUT/CMP0_OUT, label: 'J1[5]/LCD_P20/USB_SOF_OUT', identifier: LCD_P20;USB_SOF_OUT}
 - {pin_num: '42', pin_signal: LCD_P15/PTB19/TPM2_CH1, label: 'J1[3]/LCD_P15', identifier: LCD_P15}
 - {pin_num: '41', pin_signal: LCD_P14/PTB18/TPM2_CH0, label: 'J1[1]/LCD_P14', identifier: LCD_P14}
-- {pin_num: '12', pin_signal: ADC0_DM3/ADC0_SE7a/PTE23/TPM2_CH1/UART2_RX/FXIO0_D7, label: 'J4[7]/DIFF_ADC1_DM'}
+- {pin_num: '12', pin_signal: ADC0_DM3/ADC0_SE7a/PTE23/TPM2_CH1/UART2_RX/FXIO0_D7, label: Sens_LM35_1}
 - {pin_num: '11', pin_signal: ADC0_DP3/ADC0_SE3/PTE22/TPM2_CH0/UART2_TX/FXIO0_D6, label: 'J4[5]/DIFF_ADC1_DP', identifier: SENSOR_DE_LUZ}
 - {pin_num: '10', pin_signal: LCD_P60/ADC0_DM0/ADC0_SE4a/PTE21/TPM1_CH1/LPUART0_RX/FXIO0_D5, label: 'J4[3]/DIFF_ADC0_DM/LCD_P60', identifier: LCD_P60}
 - {pin_num: '9', pin_signal: LCD_P59/ADC0_DP0/ADC0_SE0/PTE20/TPM1_CH0/LPUART0_TX/FXIO0_D4, label: 'J4[1]/DIFF_ADC0_DP/LCD_P59', identifier: LCD_P59}
@@ -100,6 +100,9 @@ void BOARD_InitBootPins(void)
     BOARD_InitLEDsPins();
     BOARD_InitDEBUG_UARTPins();
     BOARD_InitADCPins();
+    BOARD_Lm35();
+    BOARD_BM280();
+    BOARD_InitADC_BMP280_Pins();
 }
 
 /* clang-format off */
@@ -788,6 +791,87 @@ void BOARD_InitADCPins(void)
 
     /* PORTE22 (pin 11) is configured as ADC0_SE3 */
     PORT_SetPinMux(BOARD_INITADCPINS_SENSOR_DE_LUZ_PORT, BOARD_INITADCPINS_SENSOR_DE_LUZ_PIN, kPORT_PinDisabledOrAnalog);
+}
+
+/* clang-format off */
+/*
+ * TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+BOARD_Lm35:
+- options: {callFromInitBoot: 'true', coreID: core0, enableClock: 'true'}
+- pin_list:
+  - {pin_num: '12', peripheral: ADC0, signal: 'SE, 7a', pin_signal: ADC0_DM3/ADC0_SE7a/PTE23/TPM2_CH1/UART2_RX/FXIO0_D7}
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
+ */
+/* clang-format on */
+
+/* FUNCTION ************************************************************************************************************
+ *
+ * Function Name : BOARD_Lm35
+ * Description   : Configures pin routing and optionally pin electrical features.
+ *
+ * END ****************************************************************************************************************/
+void BOARD_Lm35(void)
+{
+    /* Port E Clock Gate Control: Clock enabled */
+    CLOCK_EnableClock(kCLOCK_PortE);
+
+    /* PORTE23 (pin 12) is configured as ADC0_SE7a */
+    PORT_SetPinMux(PORTE, 23U, kPORT_PinDisabledOrAnalog);
+}
+
+/* clang-format off */
+/*
+ * TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+BOARD_BM280:
+- options: {callFromInitBoot: 'true', coreID: core0, enableClock: 'true'}
+- pin_list:
+  - {pin_num: '44', peripheral: I2C1, signal: SCL, pin_signal: LCD_P21/ADC0_SE15/PTC1/LLWU_P6/RTC_CLKIN/I2C1_SCL/TPM0_CH0}
+  - {pin_num: '45', peripheral: I2C1, signal: SDA, pin_signal: LCD_P22/ADC0_SE11/PTC2/I2C1_SDA/TPM0_CH1}
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
+ */
+/* clang-format on */
+
+/* FUNCTION ************************************************************************************************************
+ *
+ * Function Name : BOARD_BM280
+ * Description   : Configures pin routing and optionally pin electrical features.
+ *
+ * END ****************************************************************************************************************/
+void BOARD_BM280(void)
+{
+    /* Port C Clock Gate Control: Clock enabled */
+    CLOCK_EnableClock(kCLOCK_PortC);
+
+    /* PORTC1 (pin 44) is configured as I2C1_SCL */
+    PORT_SetPinMux(PORTC, 1U, kPORT_MuxAlt2);
+
+    /* PORTC2 (pin 45) is configured as I2C1_SDA */
+    PORT_SetPinMux(PORTC, 2U, kPORT_MuxAlt2);
+}
+
+/* clang-format off */
+/*
+ * TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+BOARD_InitADC_BMP280_Pins:
+- options: {callFromInitBoot: 'true', coreID: core0, enableClock: 'true'}
+- pin_list: []
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
+ */
+/* clang-format on */
+
+/* FUNCTION ************************************************************************************************************
+ *
+ * Function Name : BOARD_InitADC_BMP280_Pins
+ * Description   : Configures pin routing and optionally pin electrical features.
+ *
+ * END ****************************************************************************************************************/
+void BOARD_InitADC_BMP280_Pins(void)
+{
+    /* Port B Clock Gate Control: Clock enabled */
+    CLOCK_EnableClock(kCLOCK_PortB);
+
+    /* PORTB0 (pin 35) is configured as ADC0_SE8 */
+    PORT_SetPinMux(BOARD_INITADC_PINS_sensor_externo_PORT, BOARD_INITADC_PINS_sensor_externo_PIN, kPORT_PinDisabledOrAnalog);
 }
 /***********************************************************************************************************************
  * EOF
