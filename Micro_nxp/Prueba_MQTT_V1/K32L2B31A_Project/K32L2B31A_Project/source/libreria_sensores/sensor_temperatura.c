@@ -83,7 +83,7 @@ int Sens_BMP280_INIT(void){
     }
     printf("OK\r\n");
 
-    printf("Detectando BME280:");
+    printf("Detectando BMP280:");
     //LLamado a funcion que identifica sensor BME280
     if (bmp280WhoAmI() == kStatus_Success){
     	printf("OK\r\n");

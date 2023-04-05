@@ -95,7 +95,7 @@ instance:
 - config_sets:
   - fsl_adc16:
     - adc16_config:
-      - referenceVoltageSource: 'kADC16_ReferenceVoltageSourceVref'
+      - referenceVoltageSource: 'kADC16_ReferenceVoltageSourceValt'
       - clockSource: 'kADC16_ClockSourceAsynchronousClock'
       - enableAsynchronousClock: 'true'
       - clockDivider: 'kADC16_ClockDivider8'
@@ -105,7 +105,7 @@ instance:
       - enableHighSpeed: 'false'
       - enableLowPower: 'false'
       - enableContinuousConversion: 'false'
-    - adc16_channel_mux_mode: 'kADC16_ChannelMuxA'
+    - adc16_channel_mux_mode: 'kADC16_ChannelMuxB'
     - adc16_hardware_compare_config:
       - hardwareCompareModeEnable: 'false'
     - doAutoCalibration: 'false'
@@ -121,21 +121,70 @@ instance:
       - enable_custom_name: 'false'
     - adc16_channels_config:
       - 0:
-        - channelName: 'LM35_1'
+        - channelName: 'P_BIN_0'
         - enableDifferentialConversion: 'false'
-        - channelNumber: 'SE.7a'
+        - channelNumber: 'SE.7b'
         - enableInterruptOnConversionCompleted: 'false'
         - channelGroup: '0'
-        - initializeChannel: 'true'
+        - initializeChannel: 'false'
       - 1:
-        - channelName: 'TEMP'
+        - channelName: 'P_BIN_1'
         - enableDifferentialConversion: 'false'
-        - channelNumber: 'SE.26'
+        - channelNumber: 'SE.6b'
         - enableInterruptOnConversionCompleted: 'false'
         - channelGroup: '0'
         - initializeChannel: 'false'
       - 2:
-        - channelName: 'SENSOR_EXTERNO'
+        - channelName: 'P_BIN_2'
+        - enableDifferentialConversion: 'false'
+        - channelNumber: 'SE.4b'
+        - enableInterruptOnConversionCompleted: 'false'
+        - channelGroup: '0'
+        - initializeChannel: 'false'
+      - 3:
+        - channelName: 'P_BIN_3'
+        - enableDifferentialConversion: 'false'
+        - channelNumber: 'SE.23'
+        - enableInterruptOnConversionCompleted: 'false'
+        - channelGroup: '0'
+        - initializeChannel: 'false'
+      - 4:
+        - channelName: 'P_BIN_4'
+        - enableDifferentialConversion: 'false'
+        - channelNumber: 'SE.14'
+        - enableInterruptOnConversionCompleted: 'false'
+        - channelGroup: '0'
+        - initializeChannel: 'false'
+      - 5:
+        - channelName: 'P_BIN_5'
+        - enableDifferentialConversion: 'false'
+        - channelNumber: 'SE.0'
+        - enableInterruptOnConversionCompleted: 'false'
+        - channelGroup: '0'
+        - initializeChannel: 'false'
+      - 6:
+        - channelName: 'P_BIN_6'
+        - enableDifferentialConversion: 'false'
+        - channelNumber: 'SE.3'
+        - enableInterruptOnConversionCompleted: 'false'
+        - channelGroup: '0'
+        - initializeChannel: 'false'
+      - 7:
+        - channelName: 'P_BIN_7'
+        - enableDifferentialConversion: 'false'
+        - channelNumber: 'SE.12'
+        - enableInterruptOnConversionCompleted: 'false'
+        - channelGroup: '0'
+        - initializeChannel: 'false'
+      - 8:
+        - channelName: 'P_BIN_8'
+        - enableDifferentialConversion: 'false'
+        - channelNumber: 'SE.9'
+        - enableInterruptOnConversionCompleted: 'false'
+        - channelGroup: '0'
+        - initializeChannel: 'false'
+      - 9:
+        - channelName: 'P_ATL_9'
         - enableDifferentialConversion: 'false'
         - channelNumber: 'SE.8'
         - enableInterruptOnConversionCompleted: 'false'
@@ -143,14 +192,49 @@ instance:
         - initializeChannel: 'false'
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
-adc16_channel_config_t ADC0_channelsConfig[3] = {
+adc16_channel_config_t ADC0_channelsConfig[10] = {
   {
     .channelNumber = 7U,
     .enableDifferentialConversion = false,
     .enableInterruptOnConversionCompleted = false,
   },
   {
-    .channelNumber = 26U,
+    .channelNumber = 6U,
+    .enableDifferentialConversion = false,
+    .enableInterruptOnConversionCompleted = false,
+  },
+  {
+    .channelNumber = 4U,
+    .enableDifferentialConversion = false,
+    .enableInterruptOnConversionCompleted = false,
+  },
+  {
+    .channelNumber = 23U,
+    .enableDifferentialConversion = false,
+    .enableInterruptOnConversionCompleted = false,
+  },
+  {
+    .channelNumber = 14U,
+    .enableDifferentialConversion = false,
+    .enableInterruptOnConversionCompleted = false,
+  },
+  {
+    .channelNumber = 0U,
+    .enableDifferentialConversion = false,
+    .enableInterruptOnConversionCompleted = false,
+  },
+  {
+    .channelNumber = 3U,
+    .enableDifferentialConversion = false,
+    .enableInterruptOnConversionCompleted = false,
+  },
+  {
+    .channelNumber = 12U,
+    .enableDifferentialConversion = false,
+    .enableInterruptOnConversionCompleted = false,
+  },
+  {
+    .channelNumber = 9U,
     .enableDifferentialConversion = false,
     .enableInterruptOnConversionCompleted = false,
   },
@@ -161,7 +245,7 @@ adc16_channel_config_t ADC0_channelsConfig[3] = {
   }
 };
 const adc16_config_t ADC0_config = {
-  .referenceVoltageSource = kADC16_ReferenceVoltageSourceVref,
+  .referenceVoltageSource = kADC16_ReferenceVoltageSourceValt,
   .clockSource = kADC16_ClockSourceAsynchronousClock,
   .enableAsynchronousClock = true,
   .clockDivider = kADC16_ClockDivider8,
@@ -172,7 +256,7 @@ const adc16_config_t ADC0_config = {
   .enableLowPower = false,
   .enableContinuousConversion = false
 };
-const adc16_channel_mux_mode_t ADC0_muxMode = kADC16_ChannelMuxA;
+const adc16_channel_mux_mode_t ADC0_muxMode = kADC16_ChannelMuxB;
 
 static void ADC0_init(void) {
   /* Initialize ADC16 converter */
@@ -181,8 +265,6 @@ static void ADC0_init(void) {
   ADC16_EnableHardwareTrigger(ADC0_PERIPHERAL, false);
   /* Configure channel multiplexing mode */
   ADC16_SetChannelMuxMode(ADC0_PERIPHERAL, ADC0_muxMode);
-  /* Initialize channel */
-  ADC16_SetChannelConfig(ADC0_PERIPHERAL, ADC0_CH2_CONTROL_GROUP, &ADC0_channelsConfig[2]);
 }
 
 /***********************************************************************************************************************

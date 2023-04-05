@@ -5,6 +5,7 @@
  *      Author: ggaleano
  */
 
+#include <sensor_ds18b20.h>
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -24,7 +25,6 @@
 #include "sensor_temperatura.h"
 
 
-
 //Constantes
 #define CNTRL_Z 0x1A // fin de cadena de SMS o Publicacion
 
@@ -35,13 +35,16 @@ char Mod_Snd_Tmr(char *cmd2Send,unsigned char dlyCmd);
 // Variables Globales en RAM.
 extern volatile uint8_t rx_ring_buffer[RX_RING_BUFFER_SIZE];
 //extern volatile valor_temp1
-char var_topic[24];
+char var_topic[26];
 uint32_t vbleTime=0;
 uint32_t cont_temp=0;
 int cont = 30;
+int alter_cont_sens = 0;
 int32_t nroBytesEnBuffer;
 int32_t numeroDeBytesDisponiblesEnBufferRx(void);
 float temperatura_sens1;
+float temperatura_sens2;
+float potencia_sens;
 #define nroByRx numeroDeBytesDisponiblesEnBufferRx
 
 static char appSmsSt;
@@ -109,7 +112,11 @@ char Mod_Snd_Tmr(char *cmd2Send,unsigned char dlyCmd){
 void AplicacionModem_Run(void){
 //static char keyCh; //Estatica
 	//valor_temp();
+	//sens_temp_agua();
 	temperatura_sens1 = valor_temp();
+	temperatura_sens2 = valor_temp_agua();
+	potencia_sens = valor_potencia();
+
 	switch(appSmsSt){
 		case MODEM_OFF:
 			if(Mod_Snd_Tmr("AT+CFUN=0\r\n",TIME_OFF_MODEM)) appSmsSt = MODEM_CFG_APN;
@@ -163,7 +170,7 @@ void AplicacionModem_Run(void){
 				nroBytesEnBuffer = numeroDeBytesDisponiblesEnBufferRx();
 				rx_ring_buffer[nroBytesEnBuffer] = 0x00; // fin de cadena
 				if(Modem_Respuesta_OK("OK")){ // se tiene IP
-					Mod_Snd_Tmr("AT+QMTOPEN=0,\"54.163.179.109\",1883\r\n", MODEM_WAIT_CONN_MQTT);
+					Mod_Snd_Tmr("AT+QMTOPEN=0,\"52.21.250.6\",1883\r\n", MODEM_WAIT_CONN_MQTT);
 					appSmsSt = MODEM_CONN_MQTT;
 				}else{
 					//!!! hay un error de conexion, posible no hay saldo
@@ -185,7 +192,7 @@ void AplicacionModem_Run(void){
 		case MODEM_CONN_TOPIC:
 			if(Alarma_Elapsed(vbleTime)){
 				if(Modem_Respuesta_OK("+QMTCONN: 0,0,0") || Modem_Respuesta_OK("+QMTPUB: 0,0,0")){ // Rta a conexion del Topico OK
-					Mod_Snd_Tmr("AT+QMTPUB=0,0,0,0,\"Medicion_temperatura\"\r\n",5);
+					Mod_Snd_Tmr("AT+QMTPUB=0,0,0,0,\"Medicion_temperatura\"\r\n",3);
 					appSmsSt = MODEM_PUBLIC_DATO;
 				}else{
 					appSmsSt = MODEM_OFF;
@@ -197,10 +204,19 @@ void AplicacionModem_Run(void){
 			if(Alarma_Elapsed(vbleTime)){
 				if(Modem_Respuesta_OK(">")){ // Se conecto al MQTT sin problema
 					//cont_temp = cont_temp + 5;
-					snprintf(var_topic, 24,"temperatura temp=%2.2f",temperatura_sens1);
+					if (alter_cont_sens == 0){
+						snprintf(var_topic, 26,"temperatura ambiente=%2.2f",temperatura_sens1);
+						alter_cont_sens += 1;
+					}else if(alter_cont_sens == 1){
+						snprintf(var_topic, 26,"temperatura agua=%2.2f",temperatura_sens2);
+						alter_cont_sens +=1;
+					}else{
+						snprintf(var_topic, 26,"consumo potencia=%2.2f",potencia_sens);
+						alter_cont_sens = 0 ;
+					}
 					//var_topic = "temperatura temp=30";
 					//Mod_Snd_Tmr("temperatura temp=%d",cont_temp,3);
-					Mod_Snd_Tmr((char *)(&var_topic),3);
+					Mod_Snd_Tmr((char *)(&var_topic),1);
 					appSmsSt = MODEM_FIN_MENSAJE;
 				}else {
 					appSmsSt = MODEM_OFF;
@@ -210,7 +226,7 @@ void AplicacionModem_Run(void){
 		case MODEM_FIN_MENSAJE:
 			if(Alarma_Elapsed(vbleTime)){
 				putchar(CNTRL_Z);
-				Mod_Snd_Tmr("\r\n",1);
+				Mod_Snd_Tmr("\r\n",2);
 				appSmsSt = MODEM_CONN_TOPIC;
 			}
 		break;

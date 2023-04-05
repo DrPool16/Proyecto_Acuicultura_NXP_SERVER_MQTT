@@ -20,14 +20,14 @@ pin_labels:
 - {pin_num: '28', pin_signal: PTA12/TPM1_CH0, label: 'J1[8]/D3'}
 - {pin_num: '26', pin_signal: PTA4/I2C1_SDA/TPM0_CH1/NMI_b, label: 'J1[10]/D4/SW1', identifier: SW1}
 - {pin_num: '27', pin_signal: PTA5/USB_CLKIN/TPM0_CH2, label: 'J1[12]/D5/USB_CLKIN', identifier: USB0_CLKIN}
-- {pin_num: '17', pin_signal: CMP0_IN5/ADC0_SE4b/PTE29/TPM0_CH2/TPM_CLKIN0, label: 'J1[14]/D6/CMP0_IN5'}
-- {pin_num: '18', pin_signal: DAC0_OUT/ADC0_SE23/CMP0_IN4/PTE30/TPM0_CH3/TPM_CLKIN1/LPUART1_TX/LPTMR0_ALT1, label: 'J1[16]/J4[11]/D7/CMP0_IN4/DAC_OUT'}
+- {pin_num: '17', pin_signal: CMP0_IN5/ADC0_SE4b/PTE29/TPM0_CH2/TPM_CLKIN0, label: 'J1[14]/D6/CMP0_IN5', identifier: BIN_2}
+- {pin_num: '18', pin_signal: DAC0_OUT/ADC0_SE23/CMP0_IN4/PTE30/TPM0_CH3/TPM_CLKIN1/LPUART1_TX/LPTMR0_ALT1, label: 'J1[16]/J4[11]/D7/CMP0_IN4/DAC_OUT', identifier: BIN_3}
 - {pin_num: '29', pin_signal: PTA13/TPM1_CH1, label: 'J2[2]/D8'}
 - {pin_num: '59', pin_signal: LCD_P42/PTD2/SPI0_MOSI/UART2_RX/TPM0_CH2/SPI0_MISO/FXIO0_D2, label: 'J2[4]/D9/LCD_P42', identifier: LCD_P42}
 - {pin_num: '61', pin_signal: LCD_P44/PTD4/LLWU_P14/SPI1_SS/UART2_RX/TPM0_CH4/FXIO0_D4, label: 'J2[6]/D10/SPI1_PCS0/LCD_P44', identifier: LCD_P44}
-- {pin_num: '63', pin_signal: LCD_P46/ADC0_SE7b/PTD6/LLWU_P15/SPI1_MOSI/LPUART0_RX/SPI1_MISO/FXIO0_D6, label: 'J2[8]/D11/SPI1_MOSI/LCD_P46'}
+- {pin_num: '63', pin_signal: LCD_P46/ADC0_SE7b/PTD6/LLWU_P15/SPI1_MOSI/LPUART0_RX/SPI1_MISO/FXIO0_D6, label: 'J2[8]/D11/SPI1_MOSI/LCD_P46', identifier: BIN_0}
 - {pin_num: '64', pin_signal: LCD_P47/PTD7/SPI1_MISO/LPUART0_TX/SPI1_MOSI/FXIO0_D7, label: 'J2[10]/D12/SPI1_MISO/LCD_P47'}
-- {pin_num: '62', pin_signal: LCD_P45/ADC0_SE6b/PTD5/SPI1_SCK/UART2_TX/TPM0_CH5/FXIO0_D5, label: 'J2[12]/D13/SPI1_SCK/LED1/LCD_P45', identifier: LED1}
+- {pin_num: '62', pin_signal: LCD_P45/ADC0_SE6b/PTD5/SPI1_SCK/UART2_TX/TPM0_CH5/FXIO0_D5, label: 'J2[12]/D13/SPI1_SCK/LED1/LCD_P45', identifier: LED1;BIN_1}
 - {pin_num: '1', pin_signal: LCD_P48/PTE0/CLKOUT32K/SPI1_MISO/LPUART1_TX/RTC_CLKOUT/CMP0_OUT/I2C1_SDA, label: 'J2[18]/J4[9]/D14/I2C1_SDA/CMP0_OUT/LCD_P48', identifier: I2C1_SDA}
 - {pin_num: '2', pin_signal: LCD_P49/PTE1/SPI1_MOSI/LPUART1_RX/SPI1_MISO/I2C1_SCL, label: 'J2[20]/D15/I2C1_SCL/LCD_P49', identifier: I2C1_SCL}
 - {pin_num: '39', pin_signal: LCD_P12/PTB16/SPI1_MOSI/LPUART0_RX/TPM_CLKIN0/SPI1_MISO, label: 'J2[19]/LCD_P12'}
@@ -36,16 +36,16 @@ pin_labels:
 - {pin_num: '56', pin_signal: LCD_P27/CMP0_IN1/PTC7/SPI0_MISO/USB_SOF_OUT/SPI0_MOSI, label: 'J1[11]/USB_SOF_OUT/LCD_P27', identifier: LCD_P27}
 - {pin_num: '55', pin_signal: LCD_P26/CMP0_IN0/PTC6/LLWU_P10/SPI0_MOSI/EXTRG_IN/SPI0_MISO, label: 'J1[9]/LCD_P26', identifier: LCD_P26}
 - {pin_num: '53', pin_signal: LCD_P24/PTC4/LLWU_P8/SPI0_SS/LPUART1_TX/TPM0_CH3, label: 'J1[7]/LCD_P24', identifier: LCD_P24}
-- {pin_num: '43', pin_signal: LCD_P20/ADC0_SE14/PTC0/EXTRG_IN/USB_SOF_OUT/CMP0_OUT, label: 'J1[5]/LCD_P20/USB_SOF_OUT', identifier: LCD_P20;USB_SOF_OUT}
+- {pin_num: '43', pin_signal: LCD_P20/ADC0_SE14/PTC0/EXTRG_IN/USB_SOF_OUT/CMP0_OUT, label: 'J1[5]/LCD_P20/USB_SOF_OUT', identifier: LCD_P20;USB_SOF_OUT;BIN_4}
 - {pin_num: '42', pin_signal: LCD_P15/PTB19/TPM2_CH1, label: 'J1[3]/LCD_P15', identifier: LCD_P15}
 - {pin_num: '41', pin_signal: LCD_P14/PTB18/TPM2_CH0, label: 'J1[1]/LCD_P14', identifier: LCD_P14}
 - {pin_num: '12', pin_signal: ADC0_DM3/ADC0_SE7a/PTE23/TPM2_CH1/UART2_RX/FXIO0_D7, label: Sens_LM35_1}
-- {pin_num: '11', pin_signal: ADC0_DP3/ADC0_SE3/PTE22/TPM2_CH0/UART2_TX/FXIO0_D6, label: 'J4[5]/DIFF_ADC1_DP', identifier: SENSOR_DE_LUZ}
+- {pin_num: '11', pin_signal: ADC0_DP3/ADC0_SE3/PTE22/TPM2_CH0/UART2_TX/FXIO0_D6, label: 'J4[5]/DIFF_ADC1_DP', identifier: SENSOR_DE_LUZ;BIN_6}
 - {pin_num: '10', pin_signal: LCD_P60/ADC0_DM0/ADC0_SE4a/PTE21/TPM1_CH1/LPUART0_RX/FXIO0_D5, label: 'J4[3]/DIFF_ADC0_DM/LCD_P60', identifier: LCD_P60}
-- {pin_num: '9', pin_signal: LCD_P59/ADC0_DP0/ADC0_SE0/PTE20/TPM1_CH0/LPUART0_TX/FXIO0_D4, label: 'J4[1]/DIFF_ADC0_DP/LCD_P59', identifier: LCD_P59}
+- {pin_num: '9', pin_signal: LCD_P59/ADC0_DP0/ADC0_SE0/PTE20/TPM1_CH0/LPUART0_TX/FXIO0_D4, label: 'J4[1]/DIFF_ADC0_DP/LCD_P59', identifier: LCD_P59;BIN_5}
 - {pin_num: '35', pin_signal: LCD_P0/ADC0_SE8/PTB0/LLWU_P5/I2C0_SCL/TPM1_CH0, label: 'J4[2]/A0/LCD_P0'}
-- {pin_num: '36', pin_signal: LCD_P1/ADC0_SE9/PTB1/I2C0_SDA/TPM1_CH1, label: 'J4[4]/A1/LCD_P1'}
-- {pin_num: '37', pin_signal: LCD_P2/ADC0_SE12/PTB2/I2C0_SCL/TPM2_CH0, label: 'J4[6]/A2/LCD_P2'}
+- {pin_num: '36', pin_signal: LCD_P1/ADC0_SE9/PTB1/I2C0_SDA/TPM1_CH1, label: 'J4[4]/A1/LCD_P1', identifier: BIN_8}
+- {pin_num: '37', pin_signal: LCD_P2/ADC0_SE12/PTB2/I2C0_SCL/TPM2_CH0, label: 'J4[6]/A2/LCD_P2', identifier: BIN_7}
 - {pin_num: '38', pin_signal: LCD_P3/ADC0_SE13/PTB3/I2C0_SDA/TPM2_CH1, label: 'J4[8]/A3/LCD_P3'}
 - {pin_num: '45', pin_signal: LCD_P22/ADC0_SE11/PTC2/I2C1_SDA/TPM0_CH1, label: 'J4[10]/A4/LCD_P22'}
 - {pin_num: '44', pin_signal: LCD_P21/ADC0_SE15/PTC1/LLWU_P6/RTC_CLKIN/I2C1_SCL/TPM0_CH0, label: 'J4[12]/A5/LCD_P21'}
@@ -100,7 +100,7 @@ void BOARD_InitBootPins(void)
     BOARD_InitLEDsPins();
     BOARD_InitDEBUG_UARTPins();
     BOARD_InitADCPins();
-    BOARD_Lm35();
+    BOARD_BIN_DS18B20();
     BOARD_BM280();
     BOARD_InitADC_BMP280_Pins();
 }
@@ -142,7 +142,8 @@ BOARD_InitLCDPins:
   - {pin_num: '59', peripheral: LCD, signal: 'P, 42', pin_signal: LCD_P42/PTD2/SPI0_MOSI/UART2_RX/TPM0_CH2/SPI0_MISO/FXIO0_D2, slew_rate: slow, pull_select: up, pull_enable: disable}
   - {pin_num: '60', peripheral: LCD, signal: 'P, 43', pin_signal: LCD_P43/PTD3/SPI0_MISO/UART2_TX/TPM0_CH3/SPI0_MOSI/FXIO0_D3, slew_rate: slow, pull_select: up, pull_enable: disable}
   - {pin_num: '61', peripheral: LCD, signal: 'P, 44', pin_signal: LCD_P44/PTD4/LLWU_P14/SPI1_SS/UART2_RX/TPM0_CH4/FXIO0_D4, slew_rate: slow, pull_select: up, pull_enable: disable}
-  - {pin_num: '9', peripheral: LCD, signal: 'P, 59', pin_signal: LCD_P59/ADC0_DP0/ADC0_SE0/PTE20/TPM1_CH0/LPUART0_TX/FXIO0_D4, slew_rate: slow, pull_select: up, pull_enable: disable}
+  - {pin_num: '9', peripheral: LCD, signal: 'P, 59', pin_signal: LCD_P59/ADC0_DP0/ADC0_SE0/PTE20/TPM1_CH0/LPUART0_TX/FXIO0_D4, identifier: LCD_P59, slew_rate: slow,
+    pull_select: up, pull_enable: disable}
   - {pin_num: '10', peripheral: LCD, signal: 'P, 60', pin_signal: LCD_P60/ADC0_DM0/ADC0_SE4a/PTE21/TPM1_CH1/LPUART0_RX/FXIO0_D5, slew_rate: slow, pull_select: up,
     pull_enable: disable}
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
@@ -463,8 +464,6 @@ BOARD_InitLEDsPins:
 - pin_list:
   - {pin_num: '19', peripheral: GPIOE, signal: 'GPIO, 31', pin_signal: PTE31/TPM0_CH4, direction: OUTPUT, gpio_init_state: 'true', slew_rate: slow, pull_select: down,
     pull_enable: disable}
-  - {pin_num: '62', peripheral: GPIOD, signal: 'GPIO, 5', pin_signal: LCD_P45/ADC0_SE6b/PTD5/SPI1_SCK/UART2_TX/TPM0_CH5/FXIO0_D5, direction: OUTPUT, gpio_init_state: 'true',
-    slew_rate: slow, pull_select: down, pull_enable: disable}
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
  */
 /* clang-format on */
@@ -477,17 +476,8 @@ BOARD_InitLEDsPins:
  * END ****************************************************************************************************************/
 void BOARD_InitLEDsPins(void)
 {
-    /* Port D Clock Gate Control: Clock enabled */
-    CLOCK_EnableClock(kCLOCK_PortD);
     /* Port E Clock Gate Control: Clock enabled */
     CLOCK_EnableClock(kCLOCK_PortE);
-
-    gpio_pin_config_t LED1_config = {
-        .pinDirection = kGPIO_DigitalOutput,
-        .outputLogic = 1U
-    };
-    /* Initialize GPIO functionality on pin PTD5 (pin 62)  */
-    GPIO_PinInit(BOARD_LED1_GPIO, BOARD_LED1_PIN, &LED1_config);
 
     gpio_pin_config_t LED2_config = {
         .pinDirection = kGPIO_DigitalOutput,
@@ -495,19 +485,6 @@ void BOARD_InitLEDsPins(void)
     };
     /* Initialize GPIO functionality on pin PTE31 (pin 19)  */
     GPIO_PinInit(BOARD_LED2_GPIO, BOARD_LED2_PIN, &LED2_config);
-
-    const port_pin_config_t LED1 = {/* Internal pull-up/down resistor is disabled */
-                                    kPORT_PullDisable,
-                                    /* Slow slew rate is configured */
-                                    kPORT_SlowSlewRate,
-                                    /* Passive filter is disabled */
-                                    kPORT_PassiveFilterDisable,
-                                    /* Low drive strength is configured */
-                                    kPORT_LowDriveStrength,
-                                    /* Pin is configured as PTD5 */
-                                    kPORT_MuxAsGpio};
-    /* PORTD5 (pin 62) is configured as PTD5 */
-    PORT_SetPinConfig(BOARD_LED1_PORT, BOARD_LED1_PIN, &LED1);
 
     const port_pin_config_t LED2 = {/* Internal pull-up/down resistor is disabled */
                                     kPORT_PullDisable,
@@ -772,8 +749,7 @@ void BOARD_InitOSCPins(void)
  * TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
 BOARD_InitADCPins:
 - options: {callFromInitBoot: 'true', coreID: core0, enableClock: 'true'}
-- pin_list:
-  - {pin_num: '11', peripheral: ADC0, signal: 'SE, 3', pin_signal: ADC0_DP3/ADC0_SE3/PTE22/TPM2_CH0/UART2_TX/FXIO0_D6}
+- pin_list: []
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
  */
 /* clang-format on */
@@ -786,37 +762,87 @@ BOARD_InitADCPins:
  * END ****************************************************************************************************************/
 void BOARD_InitADCPins(void)
 {
-    /* Port E Clock Gate Control: Clock enabled */
-    CLOCK_EnableClock(kCLOCK_PortE);
-
-    /* PORTE22 (pin 11) is configured as ADC0_SE3 */
-    PORT_SetPinMux(BOARD_INITADCPINS_SENSOR_DE_LUZ_PORT, BOARD_INITADCPINS_SENSOR_DE_LUZ_PIN, kPORT_PinDisabledOrAnalog);
 }
 
 /* clang-format off */
 /*
  * TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-BOARD_Lm35:
+BOARD_BIN_DS18B20:
 - options: {callFromInitBoot: 'true', coreID: core0, enableClock: 'true'}
 - pin_list:
-  - {pin_num: '12', peripheral: ADC0, signal: 'SE, 7a', pin_signal: ADC0_DM3/ADC0_SE7a/PTE23/TPM2_CH1/UART2_RX/FXIO0_D7}
+  - {pin_num: '63', peripheral: ADC0, signal: 'SE, 7b', pin_signal: LCD_P46/ADC0_SE7b/PTD6/LLWU_P15/SPI1_MOSI/LPUART0_RX/SPI1_MISO/FXIO0_D6, slew_rate: no_init, drive_strength: no_init,
+    pull_select: no_init, pull_enable: no_init, passive_filter: no_init}
+  - {pin_num: '62', peripheral: ADC0, signal: 'SE, 6b', pin_signal: LCD_P45/ADC0_SE6b/PTD5/SPI1_SCK/UART2_TX/TPM0_CH5/FXIO0_D5, identifier: BIN_1, slew_rate: no_init,
+    drive_strength: no_init, pull_select: no_init, pull_enable: disable}
+  - {pin_num: '17', peripheral: ADC0, signal: 'SE, 4b', pin_signal: CMP0_IN5/ADC0_SE4b/PTE29/TPM0_CH2/TPM_CLKIN0, slew_rate: no_init, drive_strength: no_init, pull_select: no_init}
+  - {pin_num: '18', peripheral: ADC0, signal: 'SE, 23', pin_signal: DAC0_OUT/ADC0_SE23/CMP0_IN4/PTE30/TPM0_CH3/TPM_CLKIN1/LPUART1_TX/LPTMR0_ALT1, slew_rate: no_init,
+    drive_strength: no_init, pull_select: no_init}
+  - {pin_num: '43', peripheral: ADC0, signal: 'SE, 14', pin_signal: LCD_P20/ADC0_SE14/PTC0/EXTRG_IN/USB_SOF_OUT/CMP0_OUT, identifier: BIN_4, slew_rate: no_init, drive_strength: no_init,
+    pull_select: no_init}
+  - {pin_num: '9', peripheral: ADC0, signal: 'SE, 0', pin_signal: LCD_P59/ADC0_DP0/ADC0_SE0/PTE20/TPM1_CH0/LPUART0_TX/FXIO0_D4, identifier: BIN_5, slew_rate: no_init,
+    drive_strength: no_init, pull_select: no_init}
+  - {pin_num: '11', peripheral: ADC0, signal: 'SE, 3', pin_signal: ADC0_DP3/ADC0_SE3/PTE22/TPM2_CH0/UART2_TX/FXIO0_D6, identifier: BIN_6, slew_rate: no_init, drive_strength: no_init,
+    pull_select: no_init}
+  - {pin_num: '37', peripheral: ADC0, signal: 'SE, 12', pin_signal: LCD_P2/ADC0_SE12/PTB2/I2C0_SCL/TPM2_CH0, slew_rate: no_init, drive_strength: no_init, pull_select: no_init}
+  - {pin_num: '36', peripheral: ADC0, signal: 'SE, 9', pin_signal: LCD_P1/ADC0_SE9/PTB1/I2C0_SDA/TPM1_CH1, slew_rate: no_init, drive_strength: no_init, pull_select: no_init}
+  - {pin_num: '35', peripheral: ADC0, signal: 'SE, 8', pin_signal: LCD_P0/ADC0_SE8/PTB0/LLWU_P5/I2C0_SCL/TPM1_CH0, slew_rate: no_init, drive_strength: no_init, pull_select: no_init}
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
  */
 /* clang-format on */
 
 /* FUNCTION ************************************************************************************************************
  *
- * Function Name : BOARD_Lm35
+ * Function Name : BOARD_BIN_DS18B20
  * Description   : Configures pin routing and optionally pin electrical features.
  *
  * END ****************************************************************************************************************/
-void BOARD_Lm35(void)
+void BOARD_BIN_DS18B20(void)
 {
+    /* Port B Clock Gate Control: Clock enabled */
+    CLOCK_EnableClock(kCLOCK_PortB);
+    /* Port C Clock Gate Control: Clock enabled */
+    CLOCK_EnableClock(kCLOCK_PortC);
+    /* Port D Clock Gate Control: Clock enabled */
+    CLOCK_EnableClock(kCLOCK_PortD);
     /* Port E Clock Gate Control: Clock enabled */
     CLOCK_EnableClock(kCLOCK_PortE);
 
-    /* PORTE23 (pin 12) is configured as ADC0_SE7a */
-    PORT_SetPinMux(PORTE, 23U, kPORT_PinDisabledOrAnalog);
+    /* PORTB0 (pin 35) is configured as ADC0_SE8 */
+    PORT_SetPinMux(PORTB, 0U, kPORT_PinDisabledOrAnalog);
+
+    /* PORTB1 (pin 36) is configured as ADC0_SE9 */
+    PORT_SetPinMux(BOARD_BIN_DS18B20_BIN_8_PORT, BOARD_BIN_DS18B20_BIN_8_PIN, kPORT_PinDisabledOrAnalog);
+
+    /* PORTB2 (pin 37) is configured as ADC0_SE12 */
+    PORT_SetPinMux(BOARD_BIN_DS18B20_BIN_7_PORT, BOARD_BIN_DS18B20_BIN_7_PIN, kPORT_PinDisabledOrAnalog);
+
+    /* PORTC0 (pin 43) is configured as ADC0_SE14 */
+    PORT_SetPinMux(BOARD_BIN_DS18B20_BIN_4_PORT, BOARD_BIN_DS18B20_BIN_4_PIN, kPORT_PinDisabledOrAnalog);
+
+    /* PORTD5 (pin 62) is configured as ADC0_SE6b */
+    PORT_SetPinMux(BOARD_BIN_DS18B20_BIN_1_PORT, BOARD_BIN_DS18B20_BIN_1_PIN, kPORT_PinDisabledOrAnalog);
+
+    PORTD->PCR[5] = ((PORTD->PCR[5] &
+                      /* Mask bits to zero which are setting */
+                      (~(PORT_PCR_PE_MASK | PORT_PCR_ISF_MASK)))
+
+                     /* Pull Enable: Internal pullup or pulldown resistor is not enabled on the corresponding pin. */
+                     | PORT_PCR_PE(kPORT_PullDisable));
+
+    /* PORTD6 (pin 63) is configured as ADC0_SE7b */
+    PORT_SetPinMux(BOARD_BIN_DS18B20_BIN_0_PORT, BOARD_BIN_DS18B20_BIN_0_PIN, kPORT_PinDisabledOrAnalog);
+
+    /* PORTE20 (pin 9) is configured as ADC0_SE0 */
+    PORT_SetPinMux(BOARD_BIN_DS18B20_BIN_5_PORT, BOARD_BIN_DS18B20_BIN_5_PIN, kPORT_PinDisabledOrAnalog);
+
+    /* PORTE22 (pin 11) is configured as ADC0_SE3 */
+    PORT_SetPinMux(BOARD_BIN_DS18B20_BIN_6_PORT, BOARD_BIN_DS18B20_BIN_6_PIN, kPORT_PinDisabledOrAnalog);
+
+    /* PORTE29 (pin 17) is configured as ADC0_SE4b */
+    PORT_SetPinMux(BOARD_BIN_DS18B20_BIN_2_PORT, BOARD_BIN_DS18B20_BIN_2_PIN, kPORT_PinDisabledOrAnalog);
+
+    /* PORTE30 (pin 18) is configured as ADC0_SE23 */
+    PORT_SetPinMux(BOARD_BIN_DS18B20_BIN_3_PORT, BOARD_BIN_DS18B20_BIN_3_PIN, kPORT_PinDisabledOrAnalog);
 }
 
 /* clang-format off */
@@ -867,11 +893,6 @@ BOARD_InitADC_BMP280_Pins:
  * END ****************************************************************************************************************/
 void BOARD_InitADC_BMP280_Pins(void)
 {
-    /* Port B Clock Gate Control: Clock enabled */
-    CLOCK_EnableClock(kCLOCK_PortB);
-
-    /* PORTB0 (pin 35) is configured as ADC0_SE8 */
-    PORT_SetPinMux(BOARD_INITADC_PINS_sensor_externo_PORT, BOARD_INITADC_PINS_sensor_externo_PIN, kPORT_PinDisabledOrAnalog);
 }
 /***********************************************************************************************************************
  * EOF

@@ -27,6 +27,8 @@
 #include "iot_sdk_peripherals_bmp280.h"
 #include "iot_sdk_hal_i2c1.h"
 
+#include "sensor_ds18b20.h"
+
 #include "stdbool.h"
 #include "leds.h"
 #include "sensor_de_luz.h"
@@ -99,8 +101,8 @@ int main(void){
     	//SensorLuz_Task_Run();
     	AplicacionModem_Run();
     	fun_bm280();
+        sens_temp_agua();
     	//valor_temp();
-
         //AplicacionModem_Run();
     }
     /*

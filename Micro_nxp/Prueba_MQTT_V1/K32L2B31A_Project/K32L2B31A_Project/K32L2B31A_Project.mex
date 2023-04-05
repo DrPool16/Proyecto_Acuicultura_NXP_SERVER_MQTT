@@ -32,14 +32,14 @@
                <pin_label pin_num="28" pin_signal="PTA12/TPM1_CH0" label="J1[8]/D3"/>
                <pin_label pin_num="26" pin_signal="PTA4/I2C1_SDA/TPM0_CH1/NMI_b" label="J1[10]/D4/SW1" identifier="SW1"/>
                <pin_label pin_num="27" pin_signal="PTA5/USB_CLKIN/TPM0_CH2" label="J1[12]/D5/USB_CLKIN" identifier="USB0_CLKIN"/>
-               <pin_label pin_num="17" pin_signal="CMP0_IN5/ADC0_SE4b/PTE29/TPM0_CH2/TPM_CLKIN0" label="J1[14]/D6/CMP0_IN5"/>
-               <pin_label pin_num="18" pin_signal="DAC0_OUT/ADC0_SE23/CMP0_IN4/PTE30/TPM0_CH3/TPM_CLKIN1/LPUART1_TX/LPTMR0_ALT1" label="J1[16]/J4[11]/D7/CMP0_IN4/DAC_OUT"/>
+               <pin_label pin_num="17" pin_signal="CMP0_IN5/ADC0_SE4b/PTE29/TPM0_CH2/TPM_CLKIN0" label="J1[14]/D6/CMP0_IN5" identifier="BIN_2"/>
+               <pin_label pin_num="18" pin_signal="DAC0_OUT/ADC0_SE23/CMP0_IN4/PTE30/TPM0_CH3/TPM_CLKIN1/LPUART1_TX/LPTMR0_ALT1" label="J1[16]/J4[11]/D7/CMP0_IN4/DAC_OUT" identifier="BIN_3"/>
                <pin_label pin_num="29" pin_signal="PTA13/TPM1_CH1" label="J2[2]/D8"/>
                <pin_label pin_num="59" pin_signal="LCD_P42/PTD2/SPI0_MOSI/UART2_RX/TPM0_CH2/SPI0_MISO/FXIO0_D2" label="J2[4]/D9/LCD_P42" identifier="LCD_P42"/>
                <pin_label pin_num="61" pin_signal="LCD_P44/PTD4/LLWU_P14/SPI1_SS/UART2_RX/TPM0_CH4/FXIO0_D4" label="J2[6]/D10/SPI1_PCS0/LCD_P44" identifier="LCD_P44"/>
-               <pin_label pin_num="63" pin_signal="LCD_P46/ADC0_SE7b/PTD6/LLWU_P15/SPI1_MOSI/LPUART0_RX/SPI1_MISO/FXIO0_D6" label="J2[8]/D11/SPI1_MOSI/LCD_P46"/>
+               <pin_label pin_num="63" pin_signal="LCD_P46/ADC0_SE7b/PTD6/LLWU_P15/SPI1_MOSI/LPUART0_RX/SPI1_MISO/FXIO0_D6" label="J2[8]/D11/SPI1_MOSI/LCD_P46" identifier="BIN_0"/>
                <pin_label pin_num="64" pin_signal="LCD_P47/PTD7/SPI1_MISO/LPUART0_TX/SPI1_MOSI/FXIO0_D7" label="J2[10]/D12/SPI1_MISO/LCD_P47"/>
-               <pin_label pin_num="62" pin_signal="LCD_P45/ADC0_SE6b/PTD5/SPI1_SCK/UART2_TX/TPM0_CH5/FXIO0_D5" label="J2[12]/D13/SPI1_SCK/LED1/LCD_P45" identifier="LED1"/>
+               <pin_label pin_num="62" pin_signal="LCD_P45/ADC0_SE6b/PTD5/SPI1_SCK/UART2_TX/TPM0_CH5/FXIO0_D5" label="J2[12]/D13/SPI1_SCK/LED1/LCD_P45" identifier="LED1;BIN_1"/>
                <pin_label pin_num="1" pin_signal="LCD_P48/PTE0/CLKOUT32K/SPI1_MISO/LPUART1_TX/RTC_CLKOUT/CMP0_OUT/I2C1_SDA" label="J2[18]/J4[9]/D14/I2C1_SDA/CMP0_OUT/LCD_P48" identifier="I2C1_SDA"/>
                <pin_label pin_num="2" pin_signal="LCD_P49/PTE1/SPI1_MOSI/LPUART1_RX/SPI1_MISO/I2C1_SCL" label="J2[20]/D15/I2C1_SCL/LCD_P49" identifier="I2C1_SCL"/>
                <pin_label pin_num="39" pin_signal="LCD_P12/PTB16/SPI1_MOSI/LPUART0_RX/TPM_CLKIN0/SPI1_MISO" label="J2[19]/LCD_P12"/>
@@ -48,16 +48,16 @@
                <pin_label pin_num="56" pin_signal="LCD_P27/CMP0_IN1/PTC7/SPI0_MISO/USB_SOF_OUT/SPI0_MOSI" label="J1[11]/USB_SOF_OUT/LCD_P27" identifier="LCD_P27"/>
                <pin_label pin_num="55" pin_signal="LCD_P26/CMP0_IN0/PTC6/LLWU_P10/SPI0_MOSI/EXTRG_IN/SPI0_MISO" label="J1[9]/LCD_P26" identifier="LCD_P26"/>
                <pin_label pin_num="53" pin_signal="LCD_P24/PTC4/LLWU_P8/SPI0_SS/LPUART1_TX/TPM0_CH3" label="J1[7]/LCD_P24" identifier="LCD_P24"/>
-               <pin_label pin_num="43" pin_signal="LCD_P20/ADC0_SE14/PTC0/EXTRG_IN/USB_SOF_OUT/CMP0_OUT" label="J1[5]/LCD_P20/USB_SOF_OUT" identifier="LCD_P20;USB_SOF_OUT"/>
+               <pin_label pin_num="43" pin_signal="LCD_P20/ADC0_SE14/PTC0/EXTRG_IN/USB_SOF_OUT/CMP0_OUT" label="J1[5]/LCD_P20/USB_SOF_OUT" identifier="LCD_P20;USB_SOF_OUT;BIN_4"/>
                <pin_label pin_num="42" pin_signal="LCD_P15/PTB19/TPM2_CH1" label="J1[3]/LCD_P15" identifier="LCD_P15"/>
                <pin_label pin_num="41" pin_signal="LCD_P14/PTB18/TPM2_CH0" label="J1[1]/LCD_P14" identifier="LCD_P14"/>
                <pin_label pin_num="12" pin_signal="ADC0_DM3/ADC0_SE7a/PTE23/TPM2_CH1/UART2_RX/FXIO0_D7" label="Sens_LM35_1"/>
-               <pin_label pin_num="11" pin_signal="ADC0_DP3/ADC0_SE3/PTE22/TPM2_CH0/UART2_TX/FXIO0_D6" label="J4[5]/DIFF_ADC1_DP" identifier="SENSOR_DE_LUZ"/>
+               <pin_label pin_num="11" pin_signal="ADC0_DP3/ADC0_SE3/PTE22/TPM2_CH0/UART2_TX/FXIO0_D6" label="J4[5]/DIFF_ADC1_DP" identifier="SENSOR_DE_LUZ;BIN_6"/>
                <pin_label pin_num="10" pin_signal="LCD_P60/ADC0_DM0/ADC0_SE4a/PTE21/TPM1_CH1/LPUART0_RX/FXIO0_D5" label="J4[3]/DIFF_ADC0_DM/LCD_P60" identifier="LCD_P60"/>
-               <pin_label pin_num="9" pin_signal="LCD_P59/ADC0_DP0/ADC0_SE0/PTE20/TPM1_CH0/LPUART0_TX/FXIO0_D4" label="J4[1]/DIFF_ADC0_DP/LCD_P59" identifier="LCD_P59"/>
+               <pin_label pin_num="9" pin_signal="LCD_P59/ADC0_DP0/ADC0_SE0/PTE20/TPM1_CH0/LPUART0_TX/FXIO0_D4" label="J4[1]/DIFF_ADC0_DP/LCD_P59" identifier="LCD_P59;BIN_5"/>
                <pin_label pin_num="35" pin_signal="LCD_P0/ADC0_SE8/PTB0/LLWU_P5/I2C0_SCL/TPM1_CH0" label="J4[2]/A0/LCD_P0"/>
-               <pin_label pin_num="36" pin_signal="LCD_P1/ADC0_SE9/PTB1/I2C0_SDA/TPM1_CH1" label="J4[4]/A1/LCD_P1"/>
-               <pin_label pin_num="37" pin_signal="LCD_P2/ADC0_SE12/PTB2/I2C0_SCL/TPM2_CH0" label="J4[6]/A2/LCD_P2"/>
+               <pin_label pin_num="36" pin_signal="LCD_P1/ADC0_SE9/PTB1/I2C0_SDA/TPM1_CH1" label="J4[4]/A1/LCD_P1" identifier="BIN_8"/>
+               <pin_label pin_num="37" pin_signal="LCD_P2/ADC0_SE12/PTB2/I2C0_SCL/TPM2_CH0" label="J4[6]/A2/LCD_P2" identifier="BIN_7"/>
                <pin_label pin_num="38" pin_signal="LCD_P3/ADC0_SE13/PTB3/I2C0_SDA/TPM2_CH1" label="J4[8]/A3/LCD_P3"/>
                <pin_label pin_num="45" pin_signal="LCD_P22/ADC0_SE11/PTC2/I2C1_SDA/TPM0_CH1" label="J4[10]/A4/LCD_P22"/>
                <pin_label pin_num="44" pin_signal="LCD_P21/ADC0_SE15/PTC1/LLWU_P6/RTC_CLKIN/I2C1_SCL/TPM0_CH0" label="J4[12]/A5/LCD_P21"/>
@@ -209,6 +209,7 @@
                   </pin>
                   <pin peripheral="LCD" signal="P, 59" pin_num="9" pin_signal="LCD_P59/ADC0_DP0/ADC0_SE0/PTE20/TPM1_CH0/LPUART0_TX/FXIO0_D4">
                      <pin_features>
+                        <pin_feature name="identifier" value="LCD_P59"/>
                         <pin_feature name="slew_rate" value="slow"/>
                         <pin_feature name="pull_select" value="up"/>
                         <pin_feature name="pull_enable" value="disable"/>
@@ -295,15 +296,6 @@
                </dependencies>
                <pins>
                   <pin peripheral="GPIOE" signal="GPIO, 31" pin_num="19" pin_signal="PTE31/TPM0_CH4">
-                     <pin_features>
-                        <pin_feature name="direction" value="OUTPUT"/>
-                        <pin_feature name="gpio_init_state" value="true"/>
-                        <pin_feature name="slew_rate" value="slow"/>
-                        <pin_feature name="pull_select" value="down"/>
-                        <pin_feature name="pull_enable" value="disable"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="GPIOD" signal="GPIO, 5" pin_num="62" pin_signal="LCD_P45/ADC0_SE6b/PTD5/SPI1_SCK/UART2_TX/TPM0_CH5/FXIO0_D5">
                      <pin_features>
                         <pin_feature name="direction" value="OUTPUT"/>
                         <pin_feature name="gpio_init_state" value="true"/>
@@ -498,27 +490,15 @@
                   <enableClock>true</enableClock>
                </options>
                <dependencies>
-                  <dependency resourceType="Peripheral" resourceId="ADC0" description="Peripheral ADC0 is not initialized" problem_level="1" source="Pins:BOARD_InitADCPins">
-                     <feature name="initialized" evaluation="equal">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
                   <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Pins initialization requires the COMMON Driver in the project." problem_level="2" source="Pins:BOARD_InitADCPins">
                      <feature name="enabled" evaluation="equal" configuration="core0">
                         <data>true</data>
                      </feature>
                   </dependency>
-                  <dependency resourceType="SWComponent" resourceId="platform.drivers.port" description="Pins initialization requires the PORT Driver in the project." problem_level="2" source="Pins:BOARD_InitADCPins">
-                     <feature name="enabled" evaluation="equal" configuration="core0">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
                </dependencies>
-               <pins>
-                  <pin peripheral="ADC0" signal="SE, 3" pin_num="11" pin_signal="ADC0_DP3/ADC0_SE3/PTE22/TPM2_CH0/UART2_TX/FXIO0_D6"/>
-               </pins>
+               <pins/>
             </function>
-            <function name="BOARD_Lm35">
+            <function name="BOARD_BIN_DS18B20">
                <description>Configures pin routing and optionally pin electrical features.</description>
                <options>
                   <callFromInitBoot>true</callFromInitBoot>
@@ -526,24 +506,100 @@
                   <enableClock>true</enableClock>
                </options>
                <dependencies>
-                  <dependency resourceType="Peripheral" resourceId="ADC0" description="Peripheral ADC0 is not initialized" problem_level="1" source="Pins:BOARD_Lm35">
+                  <dependency resourceType="Peripheral" resourceId="ADC0" description="Peripheral ADC0 is not initialized" problem_level="1" source="Pins:BOARD_BIN_DS18B20">
                      <feature name="initialized" evaluation="equal">
                         <data>true</data>
                      </feature>
                   </dependency>
-                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Pins initialization requires the COMMON Driver in the project." problem_level="2" source="Pins:BOARD_Lm35">
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Pins initialization requires the COMMON Driver in the project." problem_level="2" source="Pins:BOARD_BIN_DS18B20">
                      <feature name="enabled" evaluation="equal" configuration="core0">
                         <data>true</data>
                      </feature>
                   </dependency>
-                  <dependency resourceType="SWComponent" resourceId="platform.drivers.port" description="Pins initialization requires the PORT Driver in the project." problem_level="2" source="Pins:BOARD_Lm35">
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.port" description="Pins initialization requires the PORT Driver in the project." problem_level="2" source="Pins:BOARD_BIN_DS18B20">
                      <feature name="enabled" evaluation="equal" configuration="core0">
                         <data>true</data>
                      </feature>
                   </dependency>
                </dependencies>
                <pins>
-                  <pin peripheral="ADC0" signal="SE, 7a" pin_num="12" pin_signal="ADC0_DM3/ADC0_SE7a/PTE23/TPM2_CH1/UART2_RX/FXIO0_D7"/>
+                  <pin peripheral="ADC0" signal="SE, 7b" pin_num="63" pin_signal="LCD_P46/ADC0_SE7b/PTD6/LLWU_P15/SPI1_MOSI/LPUART0_RX/SPI1_MISO/FXIO0_D6">
+                     <pin_features>
+                        <pin_feature name="slew_rate" value="no_init"/>
+                        <pin_feature name="drive_strength" value="no_init"/>
+                        <pin_feature name="pull_select" value="no_init"/>
+                        <pin_feature name="pull_enable" value="no_init"/>
+                        <pin_feature name="passive_filter" value="no_init"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="ADC0" signal="SE, 6b" pin_num="62" pin_signal="LCD_P45/ADC0_SE6b/PTD5/SPI1_SCK/UART2_TX/TPM0_CH5/FXIO0_D5">
+                     <pin_features>
+                        <pin_feature name="identifier" value="BIN_1"/>
+                        <pin_feature name="slew_rate" value="no_init"/>
+                        <pin_feature name="drive_strength" value="no_init"/>
+                        <pin_feature name="pull_select" value="no_init"/>
+                        <pin_feature name="pull_enable" value="disable"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="ADC0" signal="SE, 4b" pin_num="17" pin_signal="CMP0_IN5/ADC0_SE4b/PTE29/TPM0_CH2/TPM_CLKIN0">
+                     <pin_features>
+                        <pin_feature name="slew_rate" value="no_init"/>
+                        <pin_feature name="drive_strength" value="no_init"/>
+                        <pin_feature name="pull_select" value="no_init"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="ADC0" signal="SE, 23" pin_num="18" pin_signal="DAC0_OUT/ADC0_SE23/CMP0_IN4/PTE30/TPM0_CH3/TPM_CLKIN1/LPUART1_TX/LPTMR0_ALT1">
+                     <pin_features>
+                        <pin_feature name="slew_rate" value="no_init"/>
+                        <pin_feature name="drive_strength" value="no_init"/>
+                        <pin_feature name="pull_select" value="no_init"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="ADC0" signal="SE, 14" pin_num="43" pin_signal="LCD_P20/ADC0_SE14/PTC0/EXTRG_IN/USB_SOF_OUT/CMP0_OUT">
+                     <pin_features>
+                        <pin_feature name="identifier" value="BIN_4"/>
+                        <pin_feature name="slew_rate" value="no_init"/>
+                        <pin_feature name="drive_strength" value="no_init"/>
+                        <pin_feature name="pull_select" value="no_init"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="ADC0" signal="SE, 0" pin_num="9" pin_signal="LCD_P59/ADC0_DP0/ADC0_SE0/PTE20/TPM1_CH0/LPUART0_TX/FXIO0_D4">
+                     <pin_features>
+                        <pin_feature name="identifier" value="BIN_5"/>
+                        <pin_feature name="slew_rate" value="no_init"/>
+                        <pin_feature name="drive_strength" value="no_init"/>
+                        <pin_feature name="pull_select" value="no_init"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="ADC0" signal="SE, 3" pin_num="11" pin_signal="ADC0_DP3/ADC0_SE3/PTE22/TPM2_CH0/UART2_TX/FXIO0_D6">
+                     <pin_features>
+                        <pin_feature name="identifier" value="BIN_6"/>
+                        <pin_feature name="slew_rate" value="no_init"/>
+                        <pin_feature name="drive_strength" value="no_init"/>
+                        <pin_feature name="pull_select" value="no_init"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="ADC0" signal="SE, 12" pin_num="37" pin_signal="LCD_P2/ADC0_SE12/PTB2/I2C0_SCL/TPM2_CH0">
+                     <pin_features>
+                        <pin_feature name="slew_rate" value="no_init"/>
+                        <pin_feature name="drive_strength" value="no_init"/>
+                        <pin_feature name="pull_select" value="no_init"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="ADC0" signal="SE, 9" pin_num="36" pin_signal="LCD_P1/ADC0_SE9/PTB1/I2C0_SDA/TPM1_CH1">
+                     <pin_features>
+                        <pin_feature name="slew_rate" value="no_init"/>
+                        <pin_feature name="drive_strength" value="no_init"/>
+                        <pin_feature name="pull_select" value="no_init"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="ADC0" signal="SE, 8" pin_num="35" pin_signal="LCD_P0/ADC0_SE8/PTB0/LLWU_P5/I2C0_SCL/TPM1_CH0">
+                     <pin_features>
+                        <pin_feature name="slew_rate" value="no_init"/>
+                        <pin_feature name="drive_strength" value="no_init"/>
+                        <pin_feature name="pull_select" value="no_init"/>
+                     </pin_features>
+                  </pin>
                </pins>
             </function>
             <function name="BOARD_BM280">
@@ -738,12 +794,47 @@
                <description></description>
                <options/>
                <dependencies>
-                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="ADC0.adc_se.7a" description="Signal SE, channel 7a is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="ADC0.adc_se.7b" description="Signal SE, channel 7b is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
                      <feature name="routed" evaluation="">
                         <data type="Boolean">true</data>
                      </feature>
                   </dependency>
-                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="ADC0.adc_se.26" description="Signal SE, channel 26 is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="ADC0.adc_se.6b" description="Signal SE, channel 6b is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="ADC0.adc_se.4b" description="Signal SE, channel 4b is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="ADC0.adc_se.23" description="Signal SE, channel 23 is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="ADC0.adc_se.14" description="Signal SE, channel 14 is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="ADC0.adc_se.0" description="Signal SE, channel 0 is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="ADC0.adc_se.3" description="Signal SE, channel 3 is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="ADC0.adc_se.12" description="Signal SE, channel 12 is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="ADC0.adc_se.9" description="Signal SE, channel 9 is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
                      <feature name="routed" evaluation="">
                         <data type="Boolean">true</data>
                      </feature>
@@ -787,7 +878,7 @@
                   <instance name="ADC0" uuid="0022c5ce-b7ee-4c3a-a4dc-db7e4c47c917" type="adc16" type_id="adc16_897558f9b7366ed198de18c33097d7d2" mode="ADC" peripheral="ADC0" enabled="true" comment="" custom_name_enabled="false" editing_lock="false">
                      <config_set name="fsl_adc16">
                         <struct name="adc16_config">
-                           <setting name="referenceVoltageSource" value="kADC16_ReferenceVoltageSourceVref"/>
+                           <setting name="referenceVoltageSource" value="kADC16_ReferenceVoltageSourceValt"/>
                            <setting name="clockSource" value="kADC16_ClockSourceAsynchronousClock"/>
                            <setting name="enableAsynchronousClock" value="true"/>
                            <setting name="clockDivider" value="kADC16_ClockDivider8"/>
@@ -798,7 +889,7 @@
                            <setting name="enableLowPower" value="false"/>
                            <setting name="enableContinuousConversion" value="false"/>
                         </struct>
-                        <setting name="adc16_channel_mux_mode" value="kADC16_ChannelMuxA"/>
+                        <setting name="adc16_channel_mux_mode" value="kADC16_ChannelMuxB"/>
                         <struct name="adc16_hardware_compare_config">
                            <setting name="hardwareCompareModeEnable" value="false"/>
                         </struct>
@@ -816,23 +907,79 @@
                         </struct>
                         <array name="adc16_channels_config">
                            <struct name="0">
-                              <setting name="channelName" value="LM35_1"/>
+                              <setting name="channelName" value="P_BIN_0"/>
                               <setting name="enableDifferentialConversion" value="false"/>
-                              <setting name="channelNumber" value="SE.7a"/>
+                              <setting name="channelNumber" value="SE.7b"/>
                               <setting name="enableInterruptOnConversionCompleted" value="false"/>
                               <setting name="channelGroup" value="0"/>
-                              <setting name="initializeChannel" value="true"/>
+                              <setting name="initializeChannel" value="false"/>
                            </struct>
                            <struct name="1">
-                              <setting name="channelName" value="TEMP"/>
+                              <setting name="channelName" value="P_BIN_1"/>
                               <setting name="enableDifferentialConversion" value="false"/>
-                              <setting name="channelNumber" value="SE.26"/>
+                              <setting name="channelNumber" value="SE.6b"/>
                               <setting name="enableInterruptOnConversionCompleted" value="false"/>
                               <setting name="channelGroup" value="0"/>
                               <setting name="initializeChannel" value="false"/>
                            </struct>
                            <struct name="2">
-                              <setting name="channelName" value="SENSOR_EXTERNO"/>
+                              <setting name="channelName" value="P_BIN_2"/>
+                              <setting name="enableDifferentialConversion" value="false"/>
+                              <setting name="channelNumber" value="SE.4b"/>
+                              <setting name="enableInterruptOnConversionCompleted" value="false"/>
+                              <setting name="channelGroup" value="0"/>
+                              <setting name="initializeChannel" value="false"/>
+                           </struct>
+                           <struct name="3">
+                              <setting name="channelName" value="P_BIN_3"/>
+                              <setting name="enableDifferentialConversion" value="false"/>
+                              <setting name="channelNumber" value="SE.23"/>
+                              <setting name="enableInterruptOnConversionCompleted" value="false"/>
+                              <setting name="channelGroup" value="0"/>
+                              <setting name="initializeChannel" value="false"/>
+                           </struct>
+                           <struct name="4">
+                              <setting name="channelName" value="P_BIN_4"/>
+                              <setting name="enableDifferentialConversion" value="false"/>
+                              <setting name="channelNumber" value="SE.14"/>
+                              <setting name="enableInterruptOnConversionCompleted" value="false"/>
+                              <setting name="channelGroup" value="0"/>
+                              <setting name="initializeChannel" value="false"/>
+                           </struct>
+                           <struct name="5">
+                              <setting name="channelName" value="P_BIN_5"/>
+                              <setting name="enableDifferentialConversion" value="false"/>
+                              <setting name="channelNumber" value="SE.0"/>
+                              <setting name="enableInterruptOnConversionCompleted" value="false"/>
+                              <setting name="channelGroup" value="0"/>
+                              <setting name="initializeChannel" value="false"/>
+                           </struct>
+                           <struct name="6">
+                              <setting name="channelName" value="P_BIN_6"/>
+                              <setting name="enableDifferentialConversion" value="false"/>
+                              <setting name="channelNumber" value="SE.3"/>
+                              <setting name="enableInterruptOnConversionCompleted" value="false"/>
+                              <setting name="channelGroup" value="0"/>
+                              <setting name="initializeChannel" value="false"/>
+                           </struct>
+                           <struct name="7">
+                              <setting name="channelName" value="P_BIN_7"/>
+                              <setting name="enableDifferentialConversion" value="false"/>
+                              <setting name="channelNumber" value="SE.12"/>
+                              <setting name="enableInterruptOnConversionCompleted" value="false"/>
+                              <setting name="channelGroup" value="0"/>
+                              <setting name="initializeChannel" value="false"/>
+                           </struct>
+                           <struct name="8">
+                              <setting name="channelName" value="P_BIN_8"/>
+                              <setting name="enableDifferentialConversion" value="false"/>
+                              <setting name="channelNumber" value="SE.9"/>
+                              <setting name="enableInterruptOnConversionCompleted" value="false"/>
+                              <setting name="channelGroup" value="0"/>
+                              <setting name="initializeChannel" value="false"/>
+                           </struct>
+                           <struct name="9">
+                              <setting name="channelName" value="P_ATL_9"/>
                               <setting name="enableDifferentialConversion" value="false"/>
                               <setting name="channelNumber" value="SE.8"/>
                               <setting name="enableInterruptOnConversionCompleted" value="false"/>
