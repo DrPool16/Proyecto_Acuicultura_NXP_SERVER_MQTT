@@ -170,7 +170,7 @@ void AplicacionModem_Run(void){
 				nroBytesEnBuffer = numeroDeBytesDisponiblesEnBufferRx();
 				rx_ring_buffer[nroBytesEnBuffer] = 0x00; // fin de cadena
 				if(Modem_Respuesta_OK("OK")){ // se tiene IP
-					Mod_Snd_Tmr("AT+QMTOPEN=0,\"44.211.244.179\",1883\r\n", MODEM_WAIT_CONN_MQTT);
+					Mod_Snd_Tmr("AT+QMTOPEN=0,\"34.224.176.108\",1883\r\n", MODEM_WAIT_CONN_MQTT);
 					appSmsSt = MODEM_CONN_MQTT;
 				}else{
 					//!!! hay un error de conexion, posible no hay saldo
